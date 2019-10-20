@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      //Assignment5.
+      //1.qusetion
+      class TreeNode {
+        constructor(value) {
+          this.value = value;
+          this.descendents = [];
+        }
+      }
+
+      // create nodes with values 
+      const abe = new TreeNode('Abe');
+       const homer = new TreeNode('Homer'); 
+       const bart = new TreeNode('Bart');
+        const lisa = new TreeNode('Lisa'); 
+        const maggie = new TreeNode('Maggie');
+
+      // associate root with is descendents 
+      abe.descendents.push(homer);
+       homer.descendents.push(bart, lisa, maggie);
+//qusetion 1 .traverse in tree
+       function traverse(root){
+           console.log(root.value);  //to display the value
+           if(root.descendents==0){
+               return;
+           }
+           for(let ch of root.descendents){
+               traverse(ch);
+           }
+       }
+      traverse(abe);
+       //88888888888888
+    //   function contains(root,target){
+    //    let temp;
+    //    if(root.value===target){
+    //        temp=true;
+    //       // return;
+    //    }
+    //       if(root.descendents==0){
+    //            return;
+    //        }
+    //        for(let ch of root.descendents){
+    //           temp= contains(ch,target);
+    //        }
+    //        return temp;
+    //   }
+    //   console.log(contains(abe,"Lisa"));
+    //question 5
+// function treeModifier(node,modfun){
+//     node=modfun(node);
+//     //console.log(node.value);
+//     if(node.descendents===0){
+//         return;
+//     }
+//     for(let children of node.descendents){
+//         treeModifier(children,modfun);
+//     }
+//     console.log(node.value);
+// }
+// function allCaps(node){
+//     node.value=node.value.toUpperCase();
+//     return node;
+// }
+// treeModifier(abe,allCaps);
+// //*****settimeout/settimeinterval
+// function printNumbers(from,to){
+//     setInterval
+// }
+    </script>
+  </head>
+  <body></body>
+</html>

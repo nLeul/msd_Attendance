@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Get the middle element</title>
+        <script>
+            function getMiddle(arr){
+                
+                if(arr.length%2===0){
+                    let average=(arr[arr.length/2]+arr[arr.length/2-1])/2;
+                    return average;
+                }
+                else{
+                    let middle_number=arr[Math.floor(arr.length/2)];
+                    return middle_number;
+                }
+                
+            }
+            let arr=[10,20,30]
+            console.log(getMiddle(arr));
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

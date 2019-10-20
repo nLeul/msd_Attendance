@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script>
+    1.//filling an array using a fill function
+// let list=[1,2,3,4];
+// let filling=list.fill(7);
+// console.log(filling);
+    2.//filling an array specifing where to start and end.
+    //array.fill(value,start,end)
+    // let list=[1,2,3,4,];
+    // //the end is not including the index it self
+    // let filling=list.fill(0,0,1);
+    // console.log(filling);
+    3. //filling an array using a for loop
+    // let list=[1,2,3,4,5];
+    // for(let i=0;i<list.length;i++){
+    //     list[i]=7;
+    // }
+    // console.log(list);
+    4. //filling an array constantly increasing value
+    // let list=[1,2,3,4,5];
+    // for(let i=0;i<list.length;i++){
+    //     list[i]=i;
+    // }
+    // console.log(list);
+    //   5. //add 2 to each elements in an array
+    //   let list=[1,2,3,4,5];
+    //   for(let i=0;i<list.length;i++){
+    //       list[i]=list[i]+2;
+    //   } 
+    //   console.log(list);
+    5.// filling the array with decreaesing values
+    // let list=[1,2,3,4,5];
+    // function reverse(list){
+    //     let last_index=list[list.length-1];
+    //     for(let i=list[list.length-2];i>=0;i++){
+    //         list[i]=last_index-i;
+    //     }
+    //     return list;
+    // }
+    // console.log(list);// it didnt work
+    6.//reverse the content of the specified array
+    // let list=[1,2,3,4,5];
+    // function reverse(list){
+    //     let left=0;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+    //     let right=list.length-1;
+    //     while(left<right){
+    //         let swap=list[left];
+    //         list[left]=list[right];
+    //         list[right]=swap;
+    //         left++;
+    //         right--;
+    //     }
+    //     return list;
+    // }
+    //     console.log(reverse)
+        7.// reverse using a reverse function have a qusetion?
+        // let list=[1,2,3,4,5];
+        // // for(let i=0;i<list.length;i++){
+        // let reversing=list.reverse();
+        // console.log(reversing);
+        8. //summing the values in an Array
+        // let list=[1,2,3,4,5];
+        // function sums(list){
+        //     let sum=0;
+        //     for(let i=0;i<list.length;i++){
+        //         sum+=list[i];
+        //     }
+        //     return sum;
+        // }
+        // console.log(sums(list));
+        10.// finding a value linear search
+        //let key=parseFloat(prompt("enter the number?"));
+      
+        // function search(list,key){
+        //     for(let i=0;i<arr.length;i++){
+        //         if(list[i]==key){
+        //             return i;
+        //         }
+        //         else{
+        //             return -1;
+        //         }
+        //     }
+        
+        // }
+        //   let list=[1,2,3,4,5];
+        // console.log(search(list,2));
+        11. //Parallel arrays
+        let arr1=[1,2,3,4];
+        let arr2=[1,2,3,4];
+      for(let i=0;i<arr1.length;i++){
+        //   if(arr1[i]=arr2[i]){
+            arr2[i]+=arr1;
+          
+      }
+      console.log(arr2[i]);
+
+</script>
+</head>
+<body>
+</body>
+</html>

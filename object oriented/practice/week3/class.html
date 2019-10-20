@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+                                //classes syntax
+                          //    class User {
+                          //     constructor(name) {
+                          //     this.name = name;
+                          //     }
+                          //     sayHi(){
+                          //     alert(this.name);
+                          //     }
+                          //     }
+                          //     // Usage:
+                          //     let user = new User("John");
+                          //     user.sayHi()
+                              //****
+                      //    class User {
+                      //   constructor(name) {
+                      //        this.name = name;
+                      //     }
+                      //   sayHi(){
+                      //     alert(this.name);
+                      //   }};
+                      //   // proof: User is a function
+                      //  // alert(typeof User); // function
+                      //   // Usage:
+                      //   let user = new User("John");
+                      //   user.sayHi();//john
+                        //class properties versus method
+                  //       class User {
+                  // constructor(name = "Anonymous") {
+                  // this.name = name;
+                  // }
+                  // sayHi(){
+                  // console.log(`Hello, ${this.name}!`);
+                  // }}
+                  // fred= new User();
+                  // console.log(fred);//user
+                  // console.log(fred .__proto__);//object
+                  // console.log(User.prototype);//object
+                  // fred.sayHi();//hello,anonymous
+                  // bob = new User("Bob");
+                  // console.log(bob);//user
+                  // bob.sayHi();//hello,bob
+                  //***class lecture by umar
+                  // class person{
+                  //   constructor(name,age){
+                  //     this.name=name;
+                  //     this.age=age;
+                  //   }
+                  //   sayHi=function(){
+                  //     alert("hi"+this.name+this.age);
+                  //   }
+                  // }
+                  // // let p1=new person("sol",24);
+                  // // p1.sayHi();//
+                  // class student extends person{
+                  //   constructor(name,age,course){
+                  //     super(name,age);//super/parent constructor
+                  //     this.course=course;
+                  //   }
+                  //   study=function(){
+                  //     alert(this.name + " is studying "+ this.course);
+                  //   }
+                  // }
+                  // let s1=new student("sol",24,"CS301");
+                  // s1.name();
+                  // s1.study();//class Animal {
+                  //*****class Inheritance
+         class Animal{
+            constructor(name) {
+            this.speed=0;
+            this.name = name;
+            }
+            run(speed) {
+            this.speed+=speed;
+            alert(`${this.name} runs with speed ${this.speed}`);
+            }
+            stop() {
+            this.speed=0;
+            alert(`${this.name} stands still`);
+            }}
+          
+        class Rabbit {
+            constructor(name) {
+            this.name = name;
+            }
+            hide() {
+            alert(`${this.name} hides!`);
+            }
+            }
+       class Rabbit extends Animal {
+      hide() { 
+        alert(`${this.name} hides!`);
+       }
+       stop(){
+         super.stop();
+         this.hide();
+       }
+      }
+      let rabbit = new Rabbit("White Rabbit");
+      rabbit.run(5); // White Rabbit runs with speed
+      rabbit.hide(); // White Rabbit
+    </script>
+  </head>
+  <body></body>
+</html>

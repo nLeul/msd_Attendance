@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      //1. objects with the same constructor functions
+      // function Add(a,b){
+      //     this.sum=a+b;
+      // }
+      // let add= new Add(2,3);
+      // let mult= new Add(2,3);
+      // alert(add.sum);
+      // alert(mult.sum);
+      // 2.Native prototypes
+      //  let obj={};
+      //  alert(obj);//object object
+      //  obj=new object();
+      //3.object without_proto_
+      //   let animal = {
+      //     eats: true
+      //   };
+      //2.  create a new object with animal as a prototype
+      //   let rabbit =Object.create (animal);
+      //       alert(rabbit.eats); //
+      //   Object.getPrototypeOf ((rabbit) === animal); // get the prototype of rabbit
+      //   Object.setPrototypeOf(rabbit, {}); // change the prototype of rabbit to
+      //3.F.prototype
+      //   let animal = {
+      //     eats: true
+      //   };
+
+      //   function Rabbit(name) {
+      //     this.name = name;
+      //   }
+
+      //   Rabbit.prototype = animal;
+
+      //   let rabbit = new Rabbit("White Rabbit");
+      //   let rabbit=new Rabbit("black"); //  rabbit.__proto__ == animal
+
+      //   alert(rabbit.eats); // true
+      4; //function constructor
+      //   function Dog(name) {
+      //     this.name = name;
+      //   }
+
+      // Dog.prototype = animal;
+      //   let snoopy = new Dog("Snoopy");
+      //   alert(snoopy.eats); // true
+      //***** solution:change it to object literal(deprecated)
+      //   let animal = {
+      //     eats: true,
+      //   };
+      //   let snoopy={
+      //       name:snoopy,
+      //       __proto__:dog
+      //   }
+      //   alert(snoopy.eats);//true
+
+      //****change it to object.create
+      let animal = {
+        eats: true
+      };
+      function Dog(name) {
+        this.name = name;
+      }
+      Dog.prototype = animal;
+      let snoopy = new Dog("Snoopy");
+      alert(snoopy.eats); // true
+    </script>
+  </head>
+  <body></body>
+</html>

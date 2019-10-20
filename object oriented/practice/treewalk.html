@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>treewalk</title>
+
+    <script>
+     class TreeNode {
+    constructor(value) {
+        this.value = value;
+        this.descendents = [];
+    }
+}
+
+// create nodes with values
+const abe = new TreeNode('Abe');
+const homer = new TreeNode('Homer');
+const bart = new TreeNode('Bart');
+const lisa = new TreeNode('Lisa');
+const maggie = new TreeNode('Maggie');
+
+// associate root with is descendents
+abe.descendents.push(homer);
+homer.descendents.push(bart, lisa, maggie);
+        //now we are going to walk on the tree and print the values of childens
+    // function treeWalk(node) {
+    //     let caps=node.value.toUpperCase();
+    // console.log(caps);//abe,homer,bart,lisa,maggie
+    // let children = node.descendents;
+    // if (children) {
+    //     for(let i=0;i<children.length;i++){
+    //     //children.forEach(treeWalk); //loop through all children
+    //     treeWalk(children[i]);
+    //     console.log(node.value);//homer,homer,homer,abe
+    //     }
+        //console.log(node.value);//bart,lisa,maggie,homer,abe
+    }
+    //console.log(node.value);//bart,lisa,maggie,homer,abe
+}
+//console.log(node.value);//node is not defined
+
+treeWalk(abe);
+
+
+//console.log(node.value);//nothing displays
+//using for each
+// function treeWalk(node) {
+//     console.log(node.value);
+//     let childNodes = node.descendents;
+//     if (childNodes) {
+//         childNodes.forEach(treeWalk); //loop through all children
+//     }
+// }
+// treeWalk(abe);
+
+// /**
+//  * Searches through tree until find the target as the value of a node
+//  * @param {object} node that is the root of a tree or subtree
+//  * @param {string} target value that i am searching for in the tree
+//  * @returns {boolean} true if the target is in the tree, else false
+//  */
+// function treeFind(node, target) {
+
+//     if (node.value === target) {
+//         return true;
+//     };
+//     if (node.descendents === null) {
+//         return false;
+//     } else {
+//         let childNodes = node.descendents;
+//         for (anode of childNodes) {
+//             if (treeFind(anode, target)) {
+//                 return true;
+//             };
+//         }
+//     }
+//     return false;
+// }
+
+// console.log(treeFind(abe, "Lisa"));
+// console.log(treeFind(abe, "Crusty"));
+
+
+// /* solution from Sophia */
+// function isValueInTree(treeNode, searchValue) {
+//     if (treeNode.value === searchValue) {
+//         return true;
+//     }
+//     if (treeNode.descendents.length == 0) {
+//         return false;
+//     } else {
+//         // eslint-disable-next-line id-length
+//         for (let i = 0; i < treeNode.descendents.length; i++) {
+//             if (isValueInTree(treeNode.descendents[i], searchValue)) {
+//                 return true;
+//             }
+//         }
+//     }
+//     return false;
+// }
+// /**
+//  * Helper function to test exercise
+//  * @returns {undefined}
+//  */
+// function runIsValueInTree() {
+//     console.log(`Lisa is in the tree: ${isValueInTree(abe, "Lisa")}`);
+//     console.log(`Crusty is in the tree: ${isValueInTree(abe, "Crusty")}`);
+// }
+
+// runIsValueInTree();
+
+// function treeModifier(node, modifier) {
+//     node.value = modifier(node.value);
+//     console.log(node.value);
+//     let children=node.descendents;
+//     if (children) {
+//         for (let i=0;i<children.length;i++) {
+//             treeModifier(children[i], modifier);
+//         }
+//     }
+// }
+
+// function modifier(node) {
+//       return "*" + node + "***";
+//    }
+
+// treeModifier(abe, modifier);
+
+function divideby4(list){
+    let count=0;
+    while(list.value)
+}
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

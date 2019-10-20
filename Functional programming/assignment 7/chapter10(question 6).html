@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script>
+            //let list=[17,8,9,5,20];
+            function rotateLeft(list){
+                //we want to hold 17 in a variable
+                let first_Index=list[0];
+                //we loop through the array
+                for(let i=1;i<list.length;i++){
+                    //assign index of 1 to index 0
+                    list[i-1]=list[i];
+                }
+                //we assign the 17 to list.length after the loop is done
+                list[list.length-1]=first_Index;
+                return list;
+            
+            }
+             let list=[17,8,9,5,20];
+            console.log(rotateLeft(list));
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

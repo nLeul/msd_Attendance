@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+//     let birth_year=+prompt("enter your birth year");
+//     let month=+prompt("enter the month");
+//     let day=+prompt("enter the day");
+    
+//    try{
+//        if(typeof month !==number){
+//            throw Error("is not a number");
+//        }
+//     let date=new Date(birth_year,month,day);
+
+//    }catch(e){
+// console.log(e.name);
+// console.log(e.message);
+//    }
+   //ownversion map
+   function mapOwnVersion(arr,fun){
+       let new_array=[];
+       for(let i=0;i<arr.length;i++){
+           new_array.push(fun(arr[i]));
+       }
+       return new_array;
+   }
+   function squares(elem){
+        return elem*elem;
+   }
+   console.log(mapOwnVersion([10,20,30],squares));
+   function multiply(elem){
+       return elem*1000;
+   }
+   console.log(mapOwnVersion([10,20,30],multiply));
+   function negative(item){
+       return -1*item;
+   }
+   console.log(mapOwnVersion([10,20,30],negative));
+   function divide(item){
+       return item/10;
+   }
+   console.log(mapOwnVersion([10,20,30],divide));
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

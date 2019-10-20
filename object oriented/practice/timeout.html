@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<script>
+// function sayHi(name) {
+//   alert( "jon" );
+// }
+
+// //setTimeout(sayHi, 1000, "Hello", "John");
+// x=setTimeout(sayHi, 0);
+// alert("seb");
+// alert('jak');
+// let name = "John";
+//  function sayHi() {
+//       alert("Hi, " + name); 
+//     }
+//      name = "Pete";
+//       sayHi()   
+// function makeWorker() {
+//      let name = "Pete"; 
+//      return function() {
+//           alert(name); 
+//         };
+//          } 
+//          let name = "John";
+//           // create a function 
+//           let work = makeWorker();
+//           let work2=makeWorker();
+//            // call it 
+//            work();
+//            work2();
+let count = 0;
+function makeCounter() { 
+    
+     return function() {
+          return count++; 
+        }; 
+    } 
+    let counter = makeCounter();
+    let counter2=makeCounter()
+     alert( counter() ); // 0 
+     alert( counter() ); // 1 
+     alert( counter() ); // 2
+     alert(counter2());//0
+     alert(counter2());//1
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

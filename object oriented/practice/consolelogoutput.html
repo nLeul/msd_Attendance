@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<script>
+    //qusetion 1
+// function foo() { 
+//     return "baz"; 
+// } 
+// //x=console.log(foo());//baz
+//   //x=console.log(foo);//function
+//    bat = foo;
+//   //x=console.log(bat()); //baz
+//    //x=console.log(bat); //function
+//    x=console.log(alert(bat));// undefined
+//qusetion 2
+// function pow(x, n) {
+//    if (n == 1) {
+//         return x;
+//       } else {
+//            return x * pow(x, n+1);
+//     }
+// }
+// alert( pow(2, 0) );
+//scope question 
+// function a() {
+//      console.log(x);
+//       // consult Global for x and print 20 from Global 
+//     } 
+//     function b() { 
+//         var x = 10; a(); 
+//         // consult Global for a 
+//     } 
+//     //var x = 20;
+//      b();
+//inner function
+// function a() {
+//      console.log(x);
+//       // consult Global for x and print 20 from Global 
+// }
+// function b() { 
+// var x = 10; a(); // consult Global for a
+// } 
+// var x = 20;
+// b();
+//inner function
+function b() {
+     function a() {
+     console.log(x);
+    }
+          a(); 
+        } var x = 20;
+         b();
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+            //1. Inherit properties
+            //  let animal = {
+            //          eats: true };
+            //     let rabbit = {
+            //          jumps: true
+            //        };
+            //   rabbit.__proto__=animal;
+            // console.log(rabbit.eats);
+            // console.log(rabbit.jumps);
+            //2. Inherit methods
+            //       let animal = {
+            //       eats: true,
+            //     walk:
+            //     function(){
+            //     alert("Animal walk");
+            //     }
+            //     };
+            //     let rabbit = {
+            //     jumps: true,
+            //     __proto__: animal
+            //     }
+            //  console.log(rabbit.walk());//animal walk
+            //     // walk is taken from the prototype
+            //     //rabbit.walk(); // Animal walk
+            //3.Prototype chain
+            //   let animal = {
+            // eats: true,
+            // walk() {
+            // alert("Animal walk");
+            // __proto__=rabbit;
+            // }
+            // };
+            // let rabbit = {
+            // jumps: true,
+            // __proto__: animal
+            // };
+            // let longEar ={
+            // earLength: 10,
+            // __proto__:rabbit
+            // };
+            //  alert(longEar.jumps);//true
+            // alert(rabbit.eats);//true
+            // alert(longEar.walk());//animal walk
+            // alert(animal.jumps);//undefined
+            // alert(longEar.walk());//animal walk
+
+            //4. own properties: we can not delete or write a new property using prototype
+            //longEar.walk=function(){//we are assigning a new propety to longear
+            // alert("me");
+            // };
+            // longEar.walk();
+            //3. This method
+
+
+            //alert(rabbit.isSleeping); // true
+            //alert(animal.isSleeping);
+            //no such property in the
+
+            //4. for in loop
+            // let animal = {
+            //   eats: true
+            // };
+            // let rabbit = {
+            //   jumps: true,
+            //   __proto__: animal
+            // };
+            // //alert(rabbit.keys[]);did not understand
+            // for(let prop in rabbit){
+            //   alert(prop);
+            // }
+            // //5. built in method obj.has own property(key)
+            // for(let prop in rabbit){
+            // let isOwn=rabbit.hasOwnProperty(prop);
+            // if(isOwn){
+            //   alert(`our:${prop}`);
+            // }
+            // else{
+            //   alert(`Inheried:${prop}`);
+            // }}
+            //5. F_prototype:set prototype using function constructor
+      // let animal = {
+      // eats: true
+      // };
+      // function Rabbit(name) {
+      // this.name = name;
+      // }
+     
+      // Rabbit.prototype=animal;
+      // let rabbit =new Rabbit("White Rabbit"); 
+      // //rabbit.__proto __ == animal
+      // alert(rabbit.eats ); // true
+
+     // myObjproto__ = {name: "grandfather"};
+     //****
+     let animal = {
+eats: true
+}
+let snoopy= {
+ name:name,
+ __proto__:animal
+}
+alert( snoopy.eats ); // true
+
+function makecounter(){
+  let count=0;
+  let counter={};
+  function helper(){
+    counter.up=function(){
+      helper();
+      return --count;
+    };
+    counter.down=function(){
+      return
+    }
+
+  }
+}
+
+
+    </script>
+  </head>
+  <body></body>
+</html>
+
+//

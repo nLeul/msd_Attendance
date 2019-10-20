@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    let node1 = {value :50, next:  {value:3, next:null}};
+    let head = {value: 10, next:  node1};
+//question 5: list modifier
+    // function modify(list,modifier){
+    //     list.value=modifier(list.value)
+    //     console.log(list.value);
+    //     if(list.next===null){
+    //         return list.value;
+    //     }
+    //     return list.value+modify(list.next,modifier);
+    // }
+    // function modifier(list){
+    //     return "***"+ list;
+    // }
+    // modify(head,modifier);
+ //question 6: how many nodes can be divided by 4
+ 
+ function divided(list){
+     let count=0;
+    
+     if(list.value%2===0){
+     count++;
+     }
+     //console.log(node.value); 
+ }
+ divided(head);
+ //example 1: to delete the head
+//  head=head.next;
+ //example 2:
+ //to count the numbers of list we have using while loop
+// let count=0;
+// while(head!==null){
+// count++;
+// head=head.next;
+// }
+//console.log(count);
+
+//example 3: to find a value from a list of objects
+// function find(obj,n){
+//     if (obj.value==n){
+//         return obj.value;
+//     }
+//     else if(obj.next===null){
+//         return false;
+    
+//     }
+//     else{
+//         return find(obj.next,n);
+//     }
+// }
+//console.log(find(head,3));
+//example 4: to add a list to the last element
+// function addlist(obj){
+//    while(obj.next!=null){
+//        obj=obj.next;
+//    }
+//    obj.next={value:88,next:null};
+// }
+// addlist(head);
+// addlist(head);
+// while(head!=null){
+    
+// }
+// console.log(head);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+

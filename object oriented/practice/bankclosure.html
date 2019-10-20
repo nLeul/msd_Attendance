@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    // function BankAccount(){
+    //     let account=[];//array of objects
+    //     return function(number){
+    //         for(let acc of account){
+    //             if(acc.number===number){
+    //                 return acc;
+    //             }
+    //         }
+    //         let name=prompt("save the account name");
+    //         account.push({
+    //             name:name,
+    //             number:number,
+    //         });
+
+    //     }
+    // }
+    // let a=BankAccount();
+    // a(12345);
+    // console.log(a(12345));
+
+    function Seble(){
+      let seble={
+          close:"red ...",
+          shoue:"snicker"
+      }
+      return function(prop){
+          for(let p in seble){
+              if(p==prop){
+                  return seble[p];
+              }
+          }
+          let elt=prompt("enter the name of object")
+          seble[prop]=elt;
+      }
+    }
+    let s=Seble();
+   // console.log(s("close"));
+    s("food");
+    console.log(s("food"));
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
