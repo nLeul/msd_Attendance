@@ -1,5 +1,4 @@
 /* eslint-disable indent */
-
 let faculty = {
     fullname: null,
     age: 0
@@ -28,26 +27,24 @@ addFuculty();
 console.log(facultyArr);
 let studentName = document.getElementById("name");
 let departName = document.getElementById("dept");
-console.log(studentName);
+console.log(departName);
 let studentAge = document.getElementById("age");
-function hash(studentName) {
+function hash(str) {
     let prime = 37;
     let sum = 0;
-    for (let i = 0; i < studentName.length; i++) {
-        sum += studentName.charCodeAt(i);
+    for (let i = 0; i < str.length; i++) {
+        sum += str.charCodeAt(i);
     }
     return sum * prime;
 }
+console.log(hash("leul"));
 console.log(hash("abel"));
-console.log(hash("abel"));
-
-
 
 class Person {
     constructor(fullname, age) {
         this._fullName = fullname;
         this._age = age;
-        this._id = hash(studentName);
+        this._id = hash(fullname);
     }
     setName(fullname) {
         this._fullName = fullname;
@@ -62,30 +59,36 @@ class Person {
     getAge() {
         return this._age;
     }
+    getId() {
+        return this._id;
+    }
 
 }
-
 class Student extends Person {
     constructor(department, fullname, age) {
         super(fullname, age);
         this._department = department;
         this._attenCount = 0;
+        this._faculty = facultyArr;
     }
     setDepartment(department) {
         this._department = department;
+    }
+    getFaculty() {
+        return this._faculty;
     }
     getDepartment() {
         return this._department;
     }
 }
-
-
 document.getElementById("addBtn").addEventListener("click", function () {
     let addStudent = new Promise((resolve, reject) => {
         let studentObj = new Student(departName.value, studentName.value, studentAge.value);
         if (departName.value.toUpperCase() === "MSD") {
             studArr.push(studentObj);
-            resolve("succesful");
+            setTimeout(_ => resolve(`your registration is succesful and your Id is ${studentObj.getId()}`), 1000);
+            setTimeout((_ => alert(`your registration with ${facultyArr[0].fullname} is succesful and I am your ${facultyArr[0].department}`)), 2000);
+            setTimeout((_ => alert(`your registration with ${facultyArr[1].fullname} is succesful and I am your ${facultyArr[1].department}`)), 2000);
         }
         else {
             reject("unsuccesful");
