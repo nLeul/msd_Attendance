@@ -1,10 +1,12 @@
 /* eslint-disable indent */
+
 let faculty = {
     fullname: null,
     age: 0
 };
 Object.freeze(faculty);
 let facultyArr = [];
+let studArr = [];
 
 function FacultyObj(fullname, age) {
 
@@ -24,12 +26,15 @@ function addFuculty() {
 }
 addFuculty();
 console.log(facultyArr);
-let value = document.getElementById("name");
-function hash(value) {
+let studentName = document.getElementById("name");
+let departName = document.getElementById("dept");
+console.log(studentName);
+let studentAge = document.getElementById("age");
+function hash(studentName) {
     let prime = 37;
     let sum = 0;
-    for (let i = 0; i < value.length; i++) {
-        sum += value.charCodeAt(i);
+    for (let i = 0; i < studentName.length; i++) {
+        sum += studentName.charCodeAt(i);
     }
     return sum * prime;
 }
@@ -39,17 +44,59 @@ console.log(hash("abel"));
 
 
 class Person {
-    constructor(fullname, age, id) {
+    constructor(fullname, age) {
         this._fullName = fullname;
         this._age = age;
-        this._id = id;
+        this._id = hash(studentName);
     }
+    setName(fullname) {
+        this._fullName = fullname;
+
+    }
+    getName() {
+        return this._fullName;
+    }
+    setAge(age) {
+        this._age = age;
+    }
+    getAge() {
+        return this._age;
+    }
+
 }
 
 class Student extends Person {
-    constructor(department, attenCount) {
-        super();
+    constructor(department, fullname, age) {
+        super(fullname, age);
         this._department = department;
-        this._attenCount = attenCount;
+        this._attenCount = 0;
+    }
+    setDepartment(department) {
+        this._department = department;
+    }
+    getDepartment() {
+        return this._department;
     }
 }
+
+
+document.getElementById("addBtn").addEventListener("click", function () {
+    let addStudent = new Promise((resolve, reject) => {
+        let studentObj = new Student(departName.value, studentName.value, studentAge.value);
+        if (departName.value.toUpperCase() === "MSD") {
+            studArr.push(studentObj);
+            resolve("succesful");
+        }
+        else {
+            reject("unsuccesful");
+        }
+
+    });
+    addStudent.then(alert)
+        .catch(alert);
+});
+
+
+
+
+
