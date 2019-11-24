@@ -80,6 +80,12 @@ class Student extends Person {
     getDepartment() {
         return this._department;
     }
+    setAttendance() {
+        this._attenCount += this._attenCount;
+    }
+    getAttendance() {
+        return this._attenCount;
+    }
 }
 document.getElementById("addBtn").addEventListener("click", function () {
     let addStudent = new Promise((resolve, reject) => {
@@ -97,6 +103,34 @@ document.getElementById("addBtn").addEventListener("click", function () {
     });
     addStudent.then(alert)
         .catch(alert);
+    let stId = document.getElementById("id");
+    document.getElementById("submBtn").addEventListener("click", submit);
+    function submit() {
+        let meditate = new Promise((resolve, reject) => {
+            let tempStudObj = null;
+            let count = 0;
+            for (let student of studArr) {
+                if (parseInt(stId.value) == student.getId()) {
+                    tempStudObj = student;
+                    count++;
+                    break;
+
+                }
+
+            }
+            if (tempStudObj == null) {
+                reject("no id found, insert correct ID");
+
+            }
+            else {
+                tempStudObj.setAttendance();
+                studArr[count] = tempStudObj;
+                setTimeout((_ => resolve(`you have attended meditation ${+studArr[count].getAttendance()} times`)), 1000);
+            }
+        });
+        meditate.then(alert).catch(alert);
+
+    }
 });
 
 
